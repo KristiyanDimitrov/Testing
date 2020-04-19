@@ -37,8 +37,6 @@ namespace ConsoleApp1
             bmwM5.GetCarIDInfo();
             
 
-
-
             Car carb = (Car)bmwM5;
             carb.ShowDetails();
 
