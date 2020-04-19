@@ -20,7 +20,7 @@ namespace ConsoleApp1
             Console.WriteLine("This car has {0} HP and its color is {1}. Model is {2}", this.HP, this.Color, this.Model);
         }
 
-        public override void RepairCar()
+        public sealed override void RepairCar()
         {
             Console.WriteLine("{0} {1} Is repaired!", BMW.brand, this.Model);
 

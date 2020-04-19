@@ -6,6 +6,23 @@ namespace ConsoleApp1
 {
     class Car
     {
+        protected int HP { get; set; }
+        protected string Color { get; set; }
+
+        // Has a relationship
+        protected CarIDInfo carIDInfo = new CarIDInfo();
+
+        public void SetCarIDInfo(int idNum, string owner)
+        {
+            carIDInfo.IDNum = idNum;
+            carIDInfo.Owner = owner;
+        }
+
+        public void GetCarIDInfo()
+        {
+            Console.WriteLine("The Car has an ID of {0} and it's owned by {1}",carIDInfo.IDNum, carIDInfo.Owner );
+        }
+
         public Car (int HP, string color)
         {
             this.HP = HP;
@@ -27,7 +44,6 @@ namespace ConsoleApp1
             Console.WriteLine("Car Is repaired!");
         }
 
-        protected int HP { get; set; }
-        protected string Color { get; set; }
+        
     }
 }
