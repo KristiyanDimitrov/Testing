@@ -18,7 +18,7 @@ namespace OOPTesting
 
         public new void ShowDetails() // New hides the method of the base class
         {
-            Console.WriteLine("This car has {0} HP and its color is {1}. Model is {2}", this.HP, this.Color, this.Model);
+            Console.WriteLine("This Audi has {0} HP and its color is {1}. Model is {2}", this.HP, this.Color, this.Model);
         }
 
         public override void RepairCar() // Override creates a version of the base function for this class

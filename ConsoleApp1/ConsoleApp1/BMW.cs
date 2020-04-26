@@ -17,7 +17,7 @@ namespace OOPTesting
 
         public new void ShowDetails()
         {
-            Console.WriteLine("This car has {0} HP and its color is {1}. Model is {2}", this.HP, this.Color, this.Model);
+            Console.WriteLine("This BMW has {0} HP and its color is {1}. Model is {2}", this.HP, this.Color, this.Model);
         }
 
         public sealed override void RepairCar()

@@ -7,6 +7,8 @@ namespace OOPTesting
     {
         static void Main(string[] args)
         {
+            Car justCar = new Car();
+
             var cars = new List<Car>
             {
                 new Audi(200, "blue", "A4"),
@@ -42,6 +44,44 @@ namespace OOPTesting
 
             M3 myM3 = new M3(260, "red", "M3 mod");
             myM3.RepairCar();
+
+            //  checking object type
+
+            foreach (object Vehicle in Car.GetCatalog())
+            {
+                string originalType = Vehicle.GetType().ToString();
+                Console.WriteLine(originalType);
+
+                try
+                {
+                    object TestObject = new Plane("Deffo not a Car", 700);
+                    Car TestCarObject = (Car)TestObject;
+                }
+                catch { Console.WriteLine("Can't convert object"); }
+                   
+                Car TestCar = (Car)Vehicle; // ````````NOT SAFE!````````````` How to make it Safe? 
+
+
+                TestCar.ShowDetails(); // Audi hides the bse method of car but if you cast it as Car you can use it again.
+
+                BMW TestBMW = Vehicle as BMW; // Retrun null if object is not a BMW. Can use to make cast SAFE.
+                if (TestBMW == null)
+                {
+                    Console.WriteLine("This is not a BMW");
+                }
+
+                if (TestBMW is BMW)
+                {
+                    Console.WriteLine("This is a BMW");
+                }
+
+
+
+               
+                
+            }
+
+            
 
             Console.ReadKey();
             

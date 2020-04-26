@@ -13,11 +13,19 @@ namespace OOPTesting
     }
 
 
-    partial class  Car :iCar
+    partial class  Car : Vehicle, iCar
     {
-        protected int HP { get; set; }
-        protected string Color { get; set; }
+        protected override int HP { get; set; }
+        protected override string Color { get; set; }
+        private static List<Car> CarCatalog = new List<Car>();
 
+        public static IEnumerable<Car> GetCatalog()
+        {
+            foreach(Car Car in CarCatalog)
+            {
+                yield return Car;
+            }
+        }
         public void GetCarIDInfo()
         {
             Console.WriteLine("The Car has an ID of {0} and it's owned by {1}",carIDInfo.IDNum, carIDInfo.Owner );
@@ -27,6 +35,7 @@ namespace OOPTesting
         {
             this.HP = HP;
             this.Color = color;
+            CarCatalog.Add(this);
         }
         public Car()
         {
