@@ -2,21 +2,21 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConsoleApp1
+
+namespace OOPTesting
 {
-    class Car
+    public interface iCar // Access modifier on interface applies to all interface access modiers
+    {
+        void ShowDetails();
+        void RepairCar();
+
+    }
+
+
+    partial class  Car :iCar
     {
         protected int HP { get; set; }
         protected string Color { get; set; }
-
-        // Has a relationship
-        protected CarIDInfo carIDInfo = new CarIDInfo();
-
-        public void SetCarIDInfo(int idNum, string owner)
-        {
-            carIDInfo.IDNum = idNum;
-            carIDInfo.Owner = owner;
-        }
 
         public void GetCarIDInfo()
         {

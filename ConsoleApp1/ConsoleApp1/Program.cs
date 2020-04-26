@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ConsoleApp1
+namespace OOPTesting
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {

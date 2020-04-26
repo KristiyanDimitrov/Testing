@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConsoleApp1
+namespace OOPTesting
 {
 
     class Audi : Car
@@ -16,12 +16,12 @@ namespace ConsoleApp1
             this.Model = model;
         }
 
-        public new void ShowDetails()
+        public new void ShowDetails() // New hides the method of the base class
         {
             Console.WriteLine("This car has {0} HP and its color is {1}. Model is {2}", this.HP, this.Color, this.Model);
         }
 
-        public override void RepairCar()
+        public override void RepairCar() // Override creates a version of the base function for this class
         {
             Console.WriteLine("{0} {1} Is repaired!", Audi.brand, this.Model);
 

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ConsoleApp1
+namespace OOPTesting
 {
     // sealed class M3:BMW
     class M3 :BMW
